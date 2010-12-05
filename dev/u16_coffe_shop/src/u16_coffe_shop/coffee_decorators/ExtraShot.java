@@ -10,17 +10,20 @@ import u16_coffe_shop.CoffeeDecorator;
  */
 public class ExtraShot extends CoffeeDecorator {
 
+    long extraCost = 200;
+    String description = this.getClass().getSimpleName();
+
     public ExtraShot(Coffee decoratedCoffee) {
         super(decoratedCoffee);
     }
 
     @Override
-    public float getCost() {
-        return super.getCost() + 200;
+    public long getCost() {
+        return super.getCost() + extraCost;
     }
 
     @Override
     public String getDescription() {
-        return super.getDescription() + seperator + this.getClass().getSimpleName();
+        return super.getDescription() + getSeperator() + this.getClass().getSimpleName();
     }
 }

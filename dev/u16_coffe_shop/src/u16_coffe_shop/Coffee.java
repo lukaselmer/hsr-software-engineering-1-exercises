@@ -7,7 +7,7 @@ package u16_coffe_shop;
  */
 public interface Coffee {
 
-	public float getCost();
+	public long getCost();
 
 	public String getDescription();
 

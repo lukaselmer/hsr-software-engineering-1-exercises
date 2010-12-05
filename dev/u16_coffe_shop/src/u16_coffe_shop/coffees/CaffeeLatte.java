@@ -9,14 +9,17 @@ import u16_coffe_shop.Coffee;
  */
 public class CaffeeLatte implements Coffee {
 
+    long cost = 355;
+    String description = this.getClass().getSimpleName();
+
     public CaffeeLatte() {
     }
 
-    public float getCost() {
-        return 355;
+    public long getCost() {
+        return cost;
     }
 
     public String getDescription() {
-        return this.getClass().getSimpleName() + " with water";
+        return description;
     }
 }

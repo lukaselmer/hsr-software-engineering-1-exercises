@@ -7,18 +7,25 @@ package u16_coffe_shop;
  */
 public abstract class CoffeeDecorator implements Coffee {
 
-    public Coffee decoratedCoffee;
-    protected static String seperator = ", ";
+    protected Coffee decoratedCoffee;
 
     public CoffeeDecorator(Coffee decoratedCoffee) {
         this.decoratedCoffee = decoratedCoffee;
     }
 
-    public float getCost() {
+    public long getCost() {
         return decoratedCoffee.getCost();
     }
 
     public String getDescription() {
         return decoratedCoffee.getDescription();
+    }
+
+    protected boolean isFirstDecorator() {
+        return !(decoratedCoffee instanceof CoffeeDecorator);
+    }
+
+    protected String getSeperator() {
+        return (isFirstDecorator() ? " with " : ", ");
     }
 }

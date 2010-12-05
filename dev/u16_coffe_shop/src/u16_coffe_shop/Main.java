@@ -14,5 +14,8 @@ public class Main {
         Coffee moccaWhithCreamAndDecof = new Decaf(new WhippedCream(new CoffeeMocha()));
         System.out.println(moccaWhithCreamAndDecof.getDescription());
         System.out.println(moccaWhithCreamAndDecof.getCost());
+        Coffee mocca = new CoffeeMocha();
+        System.out.println(mocca.getDescription());
+        System.out.println(mocca.getCost());
     }
 }
